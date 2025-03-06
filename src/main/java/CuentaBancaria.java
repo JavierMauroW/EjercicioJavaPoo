@@ -48,6 +48,7 @@ public class CuentaBancaria {
 
     public void depositarDinero(double cantidad) {
         if (cantidad > 0) {
+
             saldo += cantidad;
             System.out.println("Se han depositado " + cantidad + " en la cuenta de " + titular);
         } else {
@@ -56,13 +57,14 @@ public class CuentaBancaria {
     }
 
     public void retirarDinero(double cantidad) {
-        if (cantidad > 0 && cantidad <= saldo) {
+          if (cantidad > 0 && cantidad <= saldo) {
             saldo -= cantidad;
-            System.out.println("Se han retirado " + cantidad + " de la cuenta de " + titular);
-        } else if (cantidad > saldo) {
+
+             System.out.println("Se han retirado " + cantidad + " de la cuenta de " + titular);
+              } else if (cantidad > saldo) {
             System.out.println("No hay suficiente saldo para retirar " + cantidad);
-        } else {
-            System.out.println("La cantidad debe ser diferente a cero");
+               } else {
+                System.out.println("La cantidad debe ser diferente a cero");
         }
     }
 }
